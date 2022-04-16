@@ -1,0 +1,15 @@
+---
+
+- name: deploy docker image
+  hosts: all
+  become: true
+
+  tasks:
+  - name: pull image
+    docker_container:
+      name: calculator
+      image: sibindockerhub/calculator:ver1
+      pull: yes
+      state: started
+      ports:
+      - "5000:3000"
