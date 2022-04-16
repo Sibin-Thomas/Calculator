@@ -9,11 +9,13 @@ function App() {
 
   let squareRoot = () => {
     let x = document.getElementById('number').value
+    console.log(new Date().toUTCString()+", "+"[Function: Square Root],"+"[Value:"+x+"]");
     document.getElementById('result').innerText = "Result: "+Math.sqrt(x).toString();
   }
 
   let factorial = () => {
     let x = document.getElementById('number').value
+    console.log(new Date().toUTCString()+", "+"[Function: Factorial],"+"[Value:"+x+"]");
     let res = 1
     for (let i=1; i<=x; i++)
       res = res * i
@@ -22,12 +24,14 @@ function App() {
 
   let power = () => {
     let x = document.getElementById('number').value
+    console.log(new Date().toUTCString()+", "+"[Function: Power],"+"[Value:"+x+"]");
     let y = document.getElementById('power').value
     document.getElementById('result').innerText = "Result: "+Math.pow(x, y).toString();
   }
 
   let naturalLog = () => {
     let x = document.getElementById('number').value
+    console.log(new Date().toUTCString()+", "+"[Function: Natural Log],"+"[Value:"+x+"]");
     document.getElementById('result').innerText = "Result: "+Math.log(x).toString();
   }
 
